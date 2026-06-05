@@ -17,14 +17,14 @@ spring:
       password:
       database: 0
       timeout: 5000ms
+    mongodb:
+      uri: mongodb://admin:123456@localhost:27017/?authSource=admin
 
   # 6. Security
   security:
     user:
       name: admin
       password: 123456
-  mongodb:
-    uri: mongodb://admin:123456@localhost:27017/?authSource=admin
   jackson: # 日期格式
       date-format: yyyy-MM-dd HH:mm:ss
       time-zone: GMT+8
@@ -37,7 +37,7 @@ jwt:
 # 7. MyBatis
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: org.tyy.demo.entity
+  type-aliases-package: com.example.demo.entity
   configuration:
     map-underscore-to-camel-case: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
